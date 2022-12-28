@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my codes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <a href="compiler resume.html" target="_blank"><h1 style="color: white;">copy the codes and paste the codes in the compiler</h1></a>
+    <h1 style="color: blue;" id="python-language">Python</h1>
+    <h1 class="headings">self service resturantes payment system</h1>
+    <div class="div-border">
+    <pre class="codes" id="selfservice">
+class Self_service():
+    def __init__(self,food = [1]):
+        self.foods = food
+    def paying(self):
+        nums_to_foods = {
+                '1': "joojeh_kabab",
+                '2': "kabab_koobide",
+                '3': "ghormeh sabzi",
+                "4": "gheymeh",
+                '5': "koofteh",
+                '6': "chengeh",
+                '7': "mahicheh",
+                "8": "baghali_polo"
+    
+            }
+        foods_to_price = {
+                "joojeh_kabab": 130000,
+                "kabab_koobide": 110000,
+                "ghormeh sabzi": 80000,
+                "gheymeh": 80000,
+                "koofteh": 50000,
+                "chengeh": 150000,
+                "mahicheh": 199000,
+                "baghali_polo": 130000,
+            }
+        self.foods = list(input(":::"))
+        self.foods.sort()
+        foods = []
+        for i in range(len(self.foods)):
+            foods.append(nums_to_foods.get(self.foods[i]))
+        price = []
+        for a in range(len(foods)):
+            price.append(foods_to_price.get(foods[a]))
+        for x in range(len(price)):
+            print(foods[x], price[x])
+            print("--------------------------------")
+        print("the total is", sum(price))
+    
+self_service = Self_service()
+    
+self_service.paying()
+
+    
+</pre>
+    <button class="copy-btns" id="selfservicebtn" onclick="copyText()" >Copy Text</button>
+    <script>
+        document.getElementById("selfservicebtn").onclick = function copyText(){
+            const text3 = document.getElementById('selfservice').innerText
+            
+            navigator.clipboard.writeText(text3);
+           
+          }
+   
+    </script>
+</div>
+    
+<br>
+    <h1 class="headings" >stopwatch</h1>
+    <div class="div-border">
+    <pre class="codes" id="stopwatch">
+import time
+hour = 0
+minute = 0
+second = 0
+while True:
+    time.sleep(1)
+    second += 1
+    if second == 59:
+        minute += 1
+        second = 0
+    if minute == 59:
+        hour += 1
+        minute = 0
+    print("----------------")
+    print(hour,':',minute,':',second)
+    print("----------------")    
+    </pre>
+    <button class="copy-btns" id="stopwatchbtn" onclick="copyText()">Copy Text</button>
+    <script>
+        document.getElementById("stopwatchbtn").onclick = function copyText(){
+            const text3 = document.getElementById('stopwatch').innerText
+            
+            navigator.clipboard.writeText(text3);
+            
+          }
+   
+    </script>
+            
+</div>
+
+
+    <br>
+    <h1 class="headings">rock paper scissors</h1>
+    <div class="div-border">
+    <pre class="codes" id="rockpaperscissors">
+import random
+rps = ("rock", "paper", "scissors")
+my_points = 0
+ai_points = 0
+while True:
+    rock_paper_scissors_dict = {
+        "r": "rock",
+        "p": "paper",
+        "s": "scissors",
+    }
+    rock_paper_scissors = str(input("\n\nr)rock p)paper s)scissor"))
+    ai_rock_paper_scissors = random.choice(rps)
+    print(rock_paper_scissors_dict.get(rock_paper_scissors) ,'_' ,ai_rock_paper_scissors)
+    if rock_paper_scissors == "r":
+        if ai_rock_paper_scissors == "rock":
+            print("draw")
+        elif ai_rock_paper_scissors == "paper":
+            my_points += 1
+            print("victory")
+        else:
+            ai_points += 1
+            print("lost")
+    elif rock_paper_scissors == "p":
+        if ai_rock_paper_scissors == "paper":
+            print("draw")
+        elif ai_rock_paper_scissors == "rock":
+            my_points += 1
+            print("victory")
+        else:
+            ai_points += 1
+            print("lost")
+    elif rock_paper_scissors == "s":
+        if ai_rock_paper_scissors == "scissors":
+            print("draw")
+        elif ai_rock_paper_scissors == "paper":
+            my_points += 1
+            print("victory")
+        else:
+            ai_points += 1
+            print("lost")
+    print("me:",my_points, 'ai:',ai_points)
+    if my_points == 6 and my_points-ai_points >= 2:
+        print("yooohooo")
+        exit()
+    if ai_points == 6:
+        print("boooooo")
+        exit()
+    </pre>
+    <button class="copy-btns" id="rockpaperscissorsbtn" onclick="copyText()">Copy Text</button>
+    </div>
+    <script>
+        document.getElementById("rockpaperscissorsbtn").onclick = function copyText(){
+            const text1 = document.getElementById('rockpaperscissors').innerText
+            
+            navigator.clipboard.writeText(text1);
+            
+          }
+   
+    </script>
+    <h1 class="headings" >password generator</h1>
+    <div class="div-border">
+    <pre class="codes" id="passgen">
+import random
+
+uppers = ("A", "B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+lowers = ("a", "b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z")
+nums = ('1','2','3','4','5','6','7','8','9','0')
+symbols = (".",",","'",'"',"","/","\\",";",":",")","(","]","[","{","}","&","%","$","#","@","!",":)","..","-",")))", ":::")
+methods = (uppers,lowers,nums,symbols)
+while True:
+    len_password = int(input("enter the length of the password: "))
+    chosen_methods = []
+    password = []
+    generated_password = ""
+    for i in range(len_password):
+        chosen_methods.append(random.choice(methods))
+    for x in chosen_methods:
+        password.append(random.choice(x))
+    for a in password:
+        generated_password += a
+    print(generated_password)
+    </pre>
+    <button class="copy-btns" id="passgenbtn" onclick="copyText()">Copy Text</button>
+    <script>
+        document.getElementById("passgenbtn").onclick = function copyText(){
+            const text3 = document.getElementById('passgen').innerText
+            
+            navigator.clipboard.writeText(text3);
+            
+          }
+   
+    </script>
+            
+</div>
+</body>
+</html>

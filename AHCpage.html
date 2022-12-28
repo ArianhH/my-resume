@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AHC</title>
+</head>
+<body style="color: green;background-color: black;">
+    <pre><code>
+        custome_syntaxes = ("/help","/restart")
+        def custom_syntaxes():
+            if COPY_in_CONSOLE == "/help":
+                #print_explain
+                print("you entered command /help")
+                print("you will see the starter syntaxes below:")
+                print("to print a text enter \"COPY_in_CONSOLE\"")
+        first_input = input(":::")
+        if first_input == "AHBC":
+        #AHBC == ah begin code
+            while first_input != "AHEC":
+                first_input = input("::;")
+                #print_syntax
+                if first_input == "COPY_in_CONSOLE":
+                    #AHEP == ah exit printing
+                    COPY_in_CONSOLE = input("PRINT:;;")
+                    if COPY_in_CONSOLE in custome_syntaxes:
+                        custom_syntaxes()
+                    elif COPY_in_CONSOLE not in custome_syntaxes:
+                        print(COPY_in_CONSOLE)
+                        while COPY_in_CONSOLE != "AHEP":
+                            COPY_in_CONSOLE = input(":;;")
+                            print(COPY_in_CONSOLE)
+    </code></pre>
+    <script>
+        alert("this is my own programming languge made using python")
+        alert("you should copy the code in an ide to use it")
+    </script>
+
+
+
+
+
+
+</body>
+</html>

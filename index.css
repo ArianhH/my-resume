@@ -1,0 +1,73 @@
+.resumetitle{
+    border: 4px dashed rgb(115, 175, 51);
+}
+body{background-color: black;}
+.olist{
+    color: wheat;
+    text-align:justify;
+    font-size:30px;
+    
+    
+}
+.theabilitiesheading{
+    float: right;
+    border:4px dashed rgb(115, 175, 51) ;
+    border-top: 0;
+    font-size: x-large;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    
+}
+.thelinksintheabilities{
+color: cornflowerblue;
+text-decoration: none;
+    
+}
+.codes{
+color: rgb(102, 236, 102);
+    
+}
+.headings{
+color: darkorange;
+font-size: 20px;
+}
+.div-border{border: 3px outset rgb(92, 0, 0);
+border-top: 0;
+border-right: 0;
+padding-left: 30px;}
+.copy-btns{
+color:darksalmon;
+background-color: rgba(100, 7, 131, 0.647);
+}
+.paragraph{
+color: springgreen;
+font-family: 'Courier New', Courier, monospace;
+font-size: xx-large;}
+.links{
+    text-decoration: none;
+color: coral;}
+.contactinformation{
+    color: wheat;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: right;
+    
+    
+
+    
+}
+.personalinformation{
+    color: wheat;
+    text-align:center;
+    font-size:30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
+}
+.progress{
+    color: rgb(0, 250, 217);
+    float: left;
+    
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>language</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body id="body1">
+<button id="darker">light theme</button>
+<button id="lighter"style="visibility: hidden;">dark theme</button>
+<span class="progress">
+    <h1 id="progress1" >TECHNICAL SKILLS</h1>
+    <li style="color: white;">
+        <h1 id="progress2">HTML AND CSS</h1>
+        <ol><progress max="100" value="80"></ol>
+            <h1 id="progress3">PYTHON</h1>
+        <ol><progress max="100" value="85"></ol>
+            <h1 id="progress4">JAVASCRIPT</h1>
+        <ol><progress max="100" value="5"></ol>
+            <h1 id="progress5">ENGLISH</h1>
+        <ol><progress max="100" value="71"></ol>
+            <h1 id="progress6">SPANISH</h1>
+        <ol><progress max="100" value="5"></ol>
+            <h1 id="progress7">BASKETBALL</h1>
+        <ol><progress max="100" value="70"></ol>
+            <h1 id="progress8">MATH</h1>
+        <ol><progress max="100" value="60"></ol>
+            <h1 id="progress9">static and possibility</h1>
+        <ol><progress max="100" value="80"></ol>
+        
+    </li>
+</span>
+
+<span class="contactinformation"> 
+    <button id="translateaboutmepage" style="visibility: visible;">فارسی</button>
+    <button id="translateaboutmepageenglish" onclick="window.location.reload();" style="visibility: hidden;">ENGLISH</button>
+    <H1 id="contactinformation">CONTACT INFORMATION</H1>
+    <li> 
+    <ol><P id="email">Email: arianhaghani770@gmail.com</P></ol>
+    <ol id="phonenumber">phone number: +989029301122</ol>
+    <ol id="address"> <pre>address:  Iran, Tehran</pre></ol>
+    <ol id="instagram">instagram: __arian._.hghni__</ol>
+</li>
+</span>
+</body>
+<script>
+    document.getElementById("translateaboutmepage").onclick = function(){
+    btn = document.getElementById("translateaboutmepage");
+    btn.style.visibility = 'hidden'
+    btn1 = document.getElementById("translateaboutmepageenglish");
+    btn1.style.visibility = 'visible'
+
+    document.getElementById("email").innerHTML = 'ایمیل: arianhaghani770@gmail.com'
+    document.getElementById("phonenumber").innerHTML = 'شماره تماس: 09029301122'
+    document.getElementById("address").innerHTML ='آدرس:ایران.تهران'
+    document.getElementById("instagram").innerHTML = 'اینستاگرام: __arian._.hghni__'
+    document.getElementById("contactinformation").innerHTML = "اطلاعات تماس"
+    document.getElementById("progress1").innerHTML = "مهارت های فردی" 
+    document.getElementById("progress2").innerHTML = "طراحی وب"
+    document.getElementById("progress3").innerHTML = "پایتون"
+    document.getElementById("progress4").innerHTML = "جاوا اسکریپت"
+    document.getElementById("progress5").innerHTML = "زبان انگلبسی"
+    document.getElementById("progress6").innerHTML = "زبان اسپانیایی"
+    document.getElementById("progress7").innerHTML = "بسکتبال"
+    document.getElementById("progress8").innerHTML = "ریاضی"
+    document.getElementById("progress9").innerHTML = "آمار و احتمال"
+
+}
+document.getElementById("darker").onclick = function(){
+    body = document.getElementById("body1");
+    body.style.background = 'grey'
+    darkerbtn = document.getElementById("darker");
+    darkerbtn.style.visibility = 'hidden'
+    lighterbtn= document.getElementById("lighter");
+    lighterbtn.style.visibility = 'visible'
+
+}
+document.getElementById("lighter").onclick = function(){
+    body = document.getElementById("body1");
+    body.style.background = 'black'
+    darkerbtn = document.getElementById("lighter");
+    darkerbtn.style.visibility = 'hidden'
+    lighterbtn= document.getElementById("darker");
+    lighterbtn.style.visibility = 'visible'
+
+}
+</script>
+</html>
+
+
